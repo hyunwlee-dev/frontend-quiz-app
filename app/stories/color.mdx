@@ -1,0 +1,39 @@
+import { Meta, ColorPalette, ColorItem } from '@storybook/blocks';
+
+<Meta title="Colors" />
+
+# Colors 
+## primary color
+<ColorPalette>
+  <ColorItem
+    title="Primary"
+    subtitle="Singapore Orchid - #A729F5"
+    colors={{ SingaporeOrchid: '#A729F5'}}
+  />
+</ColorPalette>
+## theme colors
+<ColorPalette>
+  <ColorItem 
+    title="Light Theme" 
+    subtitle="White & Light" 
+    colors={{ LightSteelBlue: '#ABC1E1', Cultured: '#F4F6FA', White: '#FFFFFF'}} 
+  />
+  <ColorItem 
+    title="Dark Theme" 
+    subtitle="Navy Variants" 
+    colors={{ Charcoal: '#313E51', PoliceBlue: '#3B4D66', DarkElectricBlue: '#626C7F' }} 
+  />
+</ColorPalette>
+## feedback colors
+<ColorPalette>
+  <ColorItem
+    title="Correct"
+    subtitle="UFO Green - #26D782"
+    colors={{ UFOGreen: '#26D782' }}
+  />
+  <ColorItem
+    title="Incorrect"
+    subtitle="Fire Opal - #EE5454"
+    colors={{ FireOpal: '#EE5454' }}
+  />
+</ColorPalette>

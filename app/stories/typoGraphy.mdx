@@ -1,0 +1,81 @@
+import { Meta, Typeset } from '@storybook/blocks';
+
+<Meta title="Typography" />
+
+export const typography = {
+  type: {
+    primary: 'Rubik, sans-serif',
+  },
+  weight: {
+    regular: '400',
+    bold: '700',
+  },
+  size: {
+    display: 144,
+    headingL: 64,
+    headingM: 36,
+    headingS: 28,
+    body: 12,
+  },
+};
+
+# Typography
+
+## Rubik
+
+<Typeset
+  fontFamily={typography.type.primary}
+  fontWeight={typography.weight.bold}
+  fontSizes={[Number(typography.size.display)]}
+  sampleText={'Lorem'}
+/>
+
+### Heading L (Bold)
+<Typeset
+  fontFamily={typography.type.primary}
+  fontWeight={typography.weight.bold}
+  fontSizes={[Number(typography.size.headingL)]}
+  sampleText={'Lorem ipsum'}
+/>
+
+### Heading L (Regular)
+<Typeset
+  fontFamily={typography.type.primary}
+  fontWeight={typography.weight.regular}
+  fontSizes={[Number(typography.size.headingL)]}
+  sampleText={'Lorem ipsum'}
+/>
+
+### Heading M
+<Typeset
+  fontFamily={typography.type.primary}
+  fontWeight={typography.weight.bold}
+  fontSizes={[Number(typography.size.headingM)]}
+  sampleText={'Lorem ipsum dolor'}
+/>
+
+### Heading S
+<Typeset
+  fontFamily={typography.type.primary}
+  fontWeight={typography.weight.bold}
+  fontSizes={[Number(typography.size.headingS)]}
+  sampleText={'Lorem ipsum dolor'}
+/>
+
+### Body M
+<Typeset
+  fontFamily={typography.type.primary}
+  fontWeight={typography.weight.regular}
+  fontSizes={[Number(typography.size.body)]}
+  sampleText={'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.'}
+/>
+
+### Body S
+<Typeset
+  fontFamily={typography.type.primary}
+  fontWeight={typography.weight.regular}
+  fontSizes={[Number(typography.size.body)]}
+  sampleText={'Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.'}
+  style={{ fontStyle: 'italic' }}
+/>
+
