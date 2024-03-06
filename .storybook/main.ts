@@ -1,5 +1,4 @@
 import type { StorybookConfig } from "@storybook/nextjs";
-import path from "path";
 
 const config: StorybookConfig = {
   stories: [
@@ -22,10 +21,6 @@ const config: StorybookConfig = {
     autodocs: "tag",
   },
   webpackFinal: async config => {
-    config.resolve ??= {};
-    config.resolve.alias ??= {};
-    config.resolve.alias["@"] = path.resolve(__dirname, "../");
-
     const imageRule = config.module?.rules?.find(rule => {
       const test = (rule as { test: RegExp }).test
 
