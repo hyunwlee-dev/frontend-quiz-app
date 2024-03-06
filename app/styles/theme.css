@@ -1,4 +1,27 @@
 :root {
+  --color-primary: #A729F5;
+  --color-white: #FFFFFF;
+
+  --font-size-display: 144px;
+  --font-size-headingL: 64px;
+  --font-size-headingM: 36px;
+  --font-size-headingS: 28px;
+  --font-size-body: 12px;
+
   --font-weight-normal: 400;
   --font-weight-bold: 700;
+}
+
+.light {
+  --theme-color-dark: #ABC1E1;
+  --theme-color-medium: #F4F6FA;
+  --theme-color-light: var(--color-white);
+  --theme-background-image: var(--theme-color-dark) url('/images/pattern-background-desktop-light.svg') no-repeat center / 100% 100%;
+}
+
+.dark {
+  --theme-color-dark: #313E51;
+  --theme-color-medium: #384D66;
+  --theme-color-light: #626C7F;
+  --theme-background-image: var(--theme-color-dark) url('/images/pattern-background-desktop-dark.svg') no-repeat center / 100% 100%;
 }

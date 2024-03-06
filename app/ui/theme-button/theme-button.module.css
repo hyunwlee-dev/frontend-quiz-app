@@ -1,0 +1,38 @@
+.theme-area {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 10.667rem;
+  height: 2.333rem;
+}
+
+.checkbox {
+  display: none;
+}
+
+.label {
+  cursor: pointer;
+  width: 48px;
+  height: 28px;
+  border-radius: 20px;
+  background-color: var(--color-primary);
+  position: relative;
+}
+
+.label::before {
+  position: absolute;
+  content: '';
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  left: 4px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background-color: var(--color-white);
+  transition: 0.3s ease 0s;
+}
+
+.checkbox:checked + .label::before {
+  left: 24px;
+}

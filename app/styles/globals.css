@@ -13,6 +13,19 @@ html,
 body {
   font-size: 18px;
   font-weight: var(--font-weight-normal);
+  position: relative;
+  min-height: 100vh;
+  font-size: var(--font-size-body);
+}
+
+body::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  background: var(--theme-background-image);
+  z-index: -100;
 }
 
 a {
@@ -29,4 +42,3 @@ button {
   border: none;
   cursor: pointer;
 }
-

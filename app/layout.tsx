@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { rubik } from "@/app/styles/font";
-import "./styles/globals.css";
+import "@/app/styles/globals.css";
+import ThemeProvider from "@/app/contexts/theme.context";
 
 const title = process.env.NEXT_PUBLIC_TITLE;
 const description = process.env.NEXT_PUBLIC_DESCRIPTION;
@@ -42,7 +43,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body className={rubik.className}>{children}</body>
+      <body className={rubik.className}>
+        <ThemeProvider>
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
