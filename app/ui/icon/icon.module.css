@@ -1,0 +1,32 @@
+.icon {
+  border-radius: 10px;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.accessibility {
+  background: var(--color-light-primary);
+}
+
+.css {
+  background: var(--color-light-green);
+}
+
+.js {
+  background: var(--color-light-blue);
+}
+
+.html {
+  background: var(--color-light-orange);
+}
+
+.a, .b, .c, .d {
+  background-color: var(--color-light-grey);
+  color: var(--color-grey-navy);
+  text-transform: uppercase;
+  font-size: var(--font-size-headingS);
+  font-weight: var(--font-weight-medium);
+}
