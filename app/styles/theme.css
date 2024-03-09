@@ -1,6 +1,13 @@
 :root {
   --color-primary: #A729F5;
   --color-white: #FFFFFF;
+  --color-dark-navy: #313E51;
+  --color-grey-navy: #626C7F;
+  --color-light-grey: #F4F6FA;
+  --color-navy: #3B4D66;
+  --color-light-bluish: #ABC1E1;
+  --color-green: #26D782;
+  --color-red: #EE5454;
 
   --font-size-display: 144px;
   --font-size-headingL: 64px;
@@ -9,19 +16,26 @@
   --font-size-body: 12px;
 
   --font-weight-normal: 400;
-  --font-weight-bold: 700;
+  --font-weight-medium: 500;
+
+  --color-light-orange: #FFF1E9;
+  --color-light-green: #E0FDEF;
+  --color-light-blue: #EBF0FF;
+  --color-light-primary: #F6E7FF;
 }
 
 .light {
-  --theme-color-dark: #ABC1E1;
-  --theme-color-medium: #F4F6FA;
+  --theme-color-dark: var(--color-light-bluish);
+  --theme-color-medium: var(--color-light-grey);
   --theme-color-light: var(--color-white);
-  --theme-background-image: var(--theme-color-dark) url('/images/pattern-background-desktop-light.svg') no-repeat center / 100% 100%;
+  --font-color-heading2: var(--color-navy);
+  --theme-background-image: var(--theme-color-medium) url('/images/pattern-background-desktop-light.svg') no-repeat center / 100% 100%;
 }
 
 .dark {
-  --theme-color-dark: #313E51;
-  --theme-color-medium: #384D66;
-  --theme-color-light: #626C7F;
-  --theme-background-image: var(--theme-color-dark) url('/images/pattern-background-desktop-dark.svg') no-repeat center / 100% 100%;
+  --theme-color-dark: var(--color-dark-navy);
+  --theme-color-medium: var(--color-navy);
+  --theme-color-light: var(--color-grey-navy);
+  --font-color-heading2: var(--color-light-grey);
+  --theme-background-image: var(--theme-color-medium) url('/images/pattern-background-desktop-dark.svg') no-repeat center / 100% 100%;
 }
