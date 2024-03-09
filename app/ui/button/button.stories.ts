@@ -2,49 +2,99 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import { Button } from '.';
 
-// More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
-  title: 'Example/Button',
+  title: 'Component/Button',
   component: Button,
   parameters: {
-    // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
-    layout: 'centered',
+    backgrounds: {
+      default: 'dark',
+      values: [
+        { name: 'light', value: 'var(--color-light-bluish)' },
+        { name: 'dark', value: 'var(--color-dark-navy)' }
+      ],
+    },
   },
-  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
   tags: ['autodocs'],
-  // More on argTypes: https://storybook.js.org/docs/api/argtypes
   argTypes: {
-    backgroundColor: { control: 'color' },
+    variant: {
+      options: ['primary', 'selection'],
+      control: { type: 'radio' },
+    },
+    iconName: {
+      options: ['accessibility', 'css', 'html', 'js', 'a', 'b', 'c', 'd'],
+      control: { type: 'radio' },
+    },
+    textContent: {
+      control: 'string'
+    },
   },
 } satisfies Meta<typeof Button>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-// More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
-export const Primary: Story = {
+export const PrimaryButton: Story = {
   args: {
-    primary: true,
-    label: 'Button',
+    textContent: 'Subit Answer',
   },
 };
 
-export const Secondary: Story = {
+export const HtmlButton: Story = {
   args: {
-    label: 'Button',
+    variant: 'selection',
+    iconName: 'html'
   },
 };
 
-export const Large: Story = {
+export const CssButton: Story = {
   args: {
-    size: 'large',
-    label: 'Button',
+    variant: 'selection',
+    iconName: 'css'
   },
 };
 
-export const Small: Story = {
+export const JsButton: Story = {
   args: {
-    size: 'small',
-    label: 'Button',
+    variant: 'selection',
+    iconName: 'js'
   },
 };
+
+export const AccessibilityButton: Story = {
+  args: {
+    variant: 'selection',
+    iconName: 'accessibility'
+  },
+};
+
+export const AButton: Story = {
+  args: {
+    variant: 'selection',
+    iconName: 'a',
+    textContent: '4.5 : 1'
+  },
+};
+
+export const BButton: Story = {
+  args: {
+    variant: 'selection',
+    iconName: 'b',
+    textContent: '3 : 1'
+  },
+};
+
+export const CButton: Story = {
+  args: {
+    variant: 'selection',
+    iconName: 'c',
+    textContent: '2.5 : 1'
+  },
+};
+
+export const DButton: Story = {
+  args: {
+    variant: 'selection',
+    iconName: 'd',
+    textContent: '5 : 1'
+  },
+};        

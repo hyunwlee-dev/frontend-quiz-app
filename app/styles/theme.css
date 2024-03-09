@@ -16,7 +16,7 @@
   --font-size-body: 12px;
 
   --font-weight-normal: 400;
-  --font-weight-medium: 500;
+  --font-weight-medium: 600;
 
   --color-light-orange: #FFF1E9;
   --color-light-green: #E0FDEF;
@@ -28,7 +28,7 @@
   --theme-color-dark: var(--color-light-bluish);
   --theme-color-medium: var(--color-light-grey);
   --theme-color-light: var(--color-white);
-  --font-color-heading2: var(--color-navy);
+  --theme-font-color: var(--color-navy);
   --theme-background-image: var(--theme-color-medium) url('/images/pattern-background-desktop-light.svg') no-repeat center / 100% 100%;
 }
 
@@ -36,6 +36,6 @@
   --theme-color-dark: var(--color-dark-navy);
   --theme-color-medium: var(--color-navy);
   --theme-color-light: var(--color-grey-navy);
-  --font-color-heading2: var(--color-light-grey);
+  --theme-font-color: var(--color-light-grey);
   --theme-background-image: var(--theme-color-medium) url('/images/pattern-background-desktop-dark.svg') no-repeat center / 100% 100%;
 }

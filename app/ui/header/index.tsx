@@ -6,7 +6,7 @@ import clsx from "clsx";
 import styles from "./header.module.css";
 
 interface IProps {
-  type: 'none' | 'html' | 'css' | 'js' | 'accessibility';
+  type: 'none' | 'accessibility' | 'css' | 'html' | 'js' | 'a' | 'b' | 'c' | 'd';
 }
 
 /**
