@@ -1,6 +1,6 @@
 "use client";
 
-import { Theme } from '../../types/theme';
+import { Theme } from '@/app/types/theme';
 import React, { InputHTMLAttributes, useId } from 'react';
 import SunLightIcon from '/public/images/icon-sun-light.svg';
 import SunDarkIcon from '/public/images/icon-sun-dark.svg';
@@ -10,32 +10,33 @@ import styles from './theme-button.module.css';
 
 interface IProps extends InputHTMLAttributes<HTMLInputElement> {
   /**
-   * LIGHT or DARK
+   *  `0` === `light` <br>
+   *  `1` === `dark`
    */
-  theme: string
+  theme: Theme;
 }
 
 /**
  * 사용자의 상호작용에 따라 theme 변경
  */
-export const ThemeButton = ({
+export function ThemeButton({
   theme,
   ...props
-}: IProps) => {
+}: IProps) {
   const toggleId = useId();
   return (
     <div className={styles['theme-area']}>
-      {theme === Theme[Theme.LIGHT] && <SunDarkIcon />}
-      {theme === Theme[Theme.DARK] && <SunLightIcon />}
+      {theme === Theme.LIGHT && <SunDarkIcon />}
+      {theme === Theme.DARK && <SunLightIcon />}
       <input type="checkbox"
-        checked={theme === Theme[Theme.DARK]}
+        checked={theme === Theme.DARK}
         className={styles.checkbox}
         id={toggleId}
         {...props}
       />
       <label className={styles.label} htmlFor={toggleId} role='button' aria-label='toggle button' />
-      {theme === Theme[Theme.LIGHT] && <MoonDarkIcon />}
-      {theme === Theme[Theme.DARK] && <MoonLightIcon />}
+      {theme === Theme.LIGHT && <MoonDarkIcon />}
+      {theme === Theme.DARK && <MoonLightIcon />}
     </div >
   );
 };

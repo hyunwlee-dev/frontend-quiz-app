@@ -1,25 +1,25 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { ThemeButton } from '.';
-import { Theme } from '../../types/theme';
+import { Theme } from '@/app/types/theme';
 
 const meta = {
-  title: 'Componene/ThemeButton',
+  title: 'Component/ThemeButton',
   component: ThemeButton,
   parameters: {
     layout: 'centered',
     backgrounds: {
       default: 'dark',
       values: [
-        { name: 'light', value: '#ABC1E1' },
-        { name: 'dark', value: '#313E51' }
+        { name: 'light', value: 'var(--color-light-bluish)' },
+        { name: 'dark', value: 'var(--color-dark-navy)' }
       ],
     },
   },
   tags: ['autodocs'],
   argTypes: {
     theme: {
-      options: [Theme[Theme.LIGHT], Theme[Theme.DARK]],
+      options: [Theme.LIGHT, Theme.DARK],
       control: { type: 'radio' },
     },
   },
@@ -30,13 +30,12 @@ type Story = StoryObj<typeof meta>;
 
 export const LightMode: Story = {
   args: {
-    theme: Theme[Theme.LIGHT]
+    theme: Theme.LIGHT
   },
 };
 
 export const DarkMode: Story = {
   args: {
-    theme: Theme[Theme.DARK]
+    theme: Theme.DARK
   },
 };
-
