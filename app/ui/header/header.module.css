@@ -1,0 +1,25 @@
+.header {
+  height: 4.667rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 6.917rem auto;
+}
+
+.item-to-end {
+  justify-content: end;
+}
+
+.left-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.heading2 {
+  padding-left: 2rem;
+  font-size: var(--font-size-headingS);
+  font-weight: var(--font-weight-medium);
+  color: var(--font-color-heading2);
+}
