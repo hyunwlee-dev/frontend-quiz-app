@@ -11,10 +11,13 @@
 
   --font-size-display: 144px;
   --font-size-headingL: 64px;
+  --font-size-headingLS: 60px;
   --font-size-headingM: 36px;
   --font-size-headingS: 28px;
+  --font-size-bodyS: 20px;
   --font-size-body: 12px;
 
+  --font-weight-thin: 300;
   --font-weight-normal: 400;
   --font-weight-medium: 600;
 
@@ -29,6 +32,8 @@
   --theme-color-medium: var(--color-light-grey);
   --theme-color-light: var(--color-white);
   --theme-font-color: var(--color-navy);
+  --theme-font-color-sub: var(--color-dark-navy);
+  --theme-background-button: var(--color-white);
   --theme-background-image: var(--theme-color-medium) url('/images/pattern-background-desktop-light.svg') no-repeat center / 100% 100%;
 }
 
@@ -37,5 +42,7 @@
   --theme-color-medium: var(--color-navy);
   --theme-color-light: var(--color-grey-navy);
   --theme-font-color: var(--color-light-grey);
-  --theme-background-image: var(--theme-color-medium) url('/images/pattern-background-desktop-dark.svg') no-repeat center / 100% 100%;
+  --theme-font-color-sub: var(--color-light-bluish);
+  --theme-background-button: var(--color-navy);
+  --theme-background-image: var(--color-dark-navy) url('/images/pattern-background-desktop-dark.svg') no-repeat center / 100% 100%;
 }

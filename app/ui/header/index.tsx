@@ -1,3 +1,4 @@
+"use client";
 import { useTheme, useThemeDispatch } from "@/app/contexts/theme.context";
 import { ThemeButton } from "@/app/ui/theme-button";
 import Container from "@/app/ui/container";
@@ -6,7 +7,7 @@ import clsx from "clsx";
 import styles from "./header.module.css";
 
 interface IProps {
-  type: 'none' | 'accessibility' | 'css' | 'html' | 'js' | 'a' | 'b' | 'c' | 'd';
+  type: 'none' | 'accessibility' | 'css' | 'html' | 'js';
 }
 
 /**
