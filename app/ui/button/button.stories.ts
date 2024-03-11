@@ -25,8 +25,15 @@ const meta = {
       control: { type: 'radio' },
     },
     textContent: {
-      control: 'string'
+      control: 'text'
     },
+    state: {
+      options: ['inactive', 'active', 'correct', 'incorrect', 'show-answer'],
+      control: { type: 'radio' },
+    },
+    inValid: {
+      control: 'boolean'
+    }
   },
 } satisfies Meta<typeof Button>;
 
@@ -36,6 +43,13 @@ type Story = StoryObj<typeof meta>;
 export const PrimaryButton: Story = {
   args: {
     textContent: 'Subit Answer',
+  },
+};
+
+export const PrimaryNotSlectedButton: Story = {
+  args: {
+    textContent: 'Subit Answer',
+    inValid: true
   },
 };
 
@@ -67,34 +81,47 @@ export const AccessibilityButton: Story = {
   },
 };
 
-export const AButton: Story = {
+export const InactiveAButton: Story = {
   args: {
     variant: 'selection',
     iconName: 'a',
-    textContent: '4.5 : 1'
+    textContent: '4.5 : 1',
+    state: 'inactive'
   },
 };
 
-export const BButton: Story = {
+export const ActiveAButton: Story = {
   args: {
     variant: 'selection',
-    iconName: 'b',
-    textContent: '3 : 1'
+    iconName: 'a',
+    textContent: '3 : 1',
+    state: 'active'
   },
 };
 
-export const CButton: Story = {
+export const CorrectAButton: Story = {
   args: {
     variant: 'selection',
-    iconName: 'c',
-    textContent: '2.5 : 1'
+    iconName: 'a',
+    textContent: '2.5 : 1',
+    state: 'correct'
   },
 };
 
-export const DButton: Story = {
+export const IncorrectAButton: Story = {
   args: {
     variant: 'selection',
-    iconName: 'd',
-    textContent: '5 : 1'
+    iconName: 'a',
+    textContent: '5 : 1',
+    state: 'incorrect'
+  },
+};
+
+export const ShowAnswerAButton: Story = {
+  args: {
+    variant: 'selection',
+    iconName: 'a',
+    textContent: '5 : 1',
+    state: 'show-answer'
   },
 };        
