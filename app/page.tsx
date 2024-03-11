@@ -1,53 +1,42 @@
 "use client";
+
+import { useRouter } from "next/navigation";
 import { Header } from "@/app/ui/header";
 import { Button } from "@/app/ui/button";
+import { IconName } from "@/app/types/iconName";
+import Container from "@/app/ui/container";
 import styles from "./page.module.css";
 
 export default function Home() {
+  const router = useRouter();
   return (
     <>
       <Header type='html' />
-      <main className={styles.main}>
-        <Button
-          textContent='Submit Answer'
-        />
-        <Button
-          variant='selection'
-          iconName='html'
-        />
-        <Button
-          variant='selection'
-          iconName='css'
-        />
-        <Button
-          variant='selection'
-          iconName='js'
-        />
-        <Button
-          variant='selection'
-          iconName='accessibility'
-        />
-        <Button
-          variant='selection'
-          iconName='a'
-          textContent='4.5 : 1'
-        />
-        <Button
-          variant='selection'
-          iconName='b'
-          textContent='3 : 1'
-        />
-        <Button
-          variant='selection'
-          iconName='c'
-          textContent='2.5 : 1'
-        />
-        <Button
-          variant='selection'
-          iconName='d'
-          textContent='5 : 1'
-        />
-      </main>
+      <Container as='main' className={styles.main}>
+        <section>
+          <h1 className={styles.h1}>
+            Welcome to the<span>Frontend Quiz!</span>
+          </h1>
+          <p className={styles.bodyS}>
+            Pick a subject to get started.
+          </p>
+        </section>
+        <section>
+          {['html', 'css', 'javascript', 'accessibility'].map((quiz) => {
+            const pickedQuiz = (quiz === 'javascript') ? 'js' : quiz as IconName;
+            return (
+              <Button
+                key={quiz}
+                className={styles.button}
+                variant='selection'
+                iconName={pickedQuiz}
+                onClick={() => router.push(`/quizzes/${quiz}`)}
+              />
+            );
+          })}
+        </section>
+      </Container >
     </>
   );
 }
+

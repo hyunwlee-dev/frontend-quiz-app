@@ -1,1 +1,37 @@
+.main {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
 
+.main > section {
+  width: 100%;
+}
+
+.h1 {
+  color: var(--theme-font-color);
+  font-size: var(--font-size-headingL);
+  font-weight: var(--font-weight-thin);
+}
+
+.h1 > span {
+  display: block;
+  font-weight: var(--font-weight-medium);
+}
+
+.bodyS {
+  color: var(--theme-font-color-sub);
+  font-size: 20px;
+  font-style: italic;
+  margin-top: 4rem;
+}
+
+.button {
+  margin-bottom: 2rem;
+}
+
+@media only screen and (max-width: 1080px) {
+  .main {
+    flex-direction: column;
+  }
+}
