@@ -1,10 +1,31 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { ProgressBar } from '.';
+import useTimer from '@/app/hooks/useTimer';
+import { useEffect } from 'react';
+
+function Template({ expireTime }: { expireTime: number }) {
+  const { isRunning, time, start, stop } = useTimer(expireTime);
+  useEffect(() => {
+    start();
+  }, []);
+
+  useEffect(() => {
+    if (!isRunning && time === 0)
+      stop();
+  }, [isRunning, time]);
+
+  return (
+    <ProgressBar
+      time={time}
+      expireTime={expireTime}
+    />
+  );
+}
 
 const meta = {
   title: 'Component/ProgressBar',
-  component: ProgressBar,
+  component: Template,
   parameters: {
     backgrounds: {
       default: 'dark',
@@ -20,7 +41,7 @@ const meta = {
       control: { type: 'number' },
     },
   },
-} satisfies Meta<typeof ProgressBar>;
+} satisfies Meta<typeof Template>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

@@ -1,8 +1,9 @@
-import { useEffect } from "react";
-import useTimer from "@/app/hooks/useTimer";
+import { HTMLAttributes } from "react";
 import styles from "./progress-bar.module.css";
+import clsx from "clsx";
 
-interface IProps {
+interface IProps extends HTMLAttributes<HTMLDivElement> {
+  time: number;
   /**
    * millisecond
    */
@@ -13,23 +14,15 @@ interface IProps {
  * progress-bar 컴포넌트
  */
 export function ProgressBar({
+  time,
   expireTime = 1000,
+  className,
 }: IProps) {
-  const { isRunning, time, start, stop } = useTimer(expireTime);
-
-  useEffect(() => {
-    start();
-  }, []);
-
-  useEffect(() => {
-    if (isRunning && time === 0)
-      stop();
-  }, [isRunning, time]);
 
   return (
-    <div className={styles['progress-bar']}>
+    <div className={clsx(styles['progress-bar'], className)}>
       <div className={styles['gauge-wrapper']}>
-        <span className={styles.gauge} style={{ width: `${time / 3000 * 100}%` }} />
+        <span className={styles.gauge} style={{ width: `${time / expireTime * 100}%` }} />
       </div>
     </div>
   );
