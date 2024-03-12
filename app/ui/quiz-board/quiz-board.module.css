@@ -94,8 +94,34 @@
     flex-direction: column;
   }
 
+  .question-panel {
+    padding-right: 0;
+  }
+
   .question-panel, .selection-panel {
     width: 100%;
   }
+
+  .progress-bar {
+    position: static;
+    width: 100%;
+    margin-top: 3rem;
+  }
+
+  .selection-panel {
+    margin-top: 3rem;
+  }
+
+  .quiz-count {
+    margin-bottom: 1.222rem;
+  }
 }
 
+@media only screen and (max-width: 768px) {
+  .h1 {
+     font-size: var(--font-size-headingS);
+  }
+  .result-board {
+    height: 342px;
+  }
+}

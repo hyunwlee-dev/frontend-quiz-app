@@ -4,7 +4,7 @@
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  margin: 6.917rem auto;
+  margin: 6.188rem auto;
 }
 
 .item-to-end {
@@ -22,4 +22,16 @@
   font-size: var(--font-size-headingS);
   font-weight: var(--font-weight-medium);
   color: var(--theme-font-color);
+}
+
+@media only screen and (max-width: 1080px) {
+  .header {
+    margin: 3.938rem auto 1.969rem auto;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .header {
+    margin: 1.625rem auto;
+  }
 }

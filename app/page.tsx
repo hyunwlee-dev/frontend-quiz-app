@@ -11,7 +11,7 @@ export default function Home() {
   const router = useRouter();
   return (
     <>
-      <Header type='html' />
+      <Header type='none' />
       <Container as='main' className={styles.main}>
         <section>
           <h1 className={styles.h1}>
@@ -21,7 +21,7 @@ export default function Home() {
             Pick a subject to get started.
           </p>
         </section>
-        <section>
+        <section className={styles.selection}>
           {['html', 'css', 'javascript', 'accessibility'].map((quiz) => {
             const pickedQuiz = (quiz === 'javascript') ? 'js' : quiz as IconName;
             return (

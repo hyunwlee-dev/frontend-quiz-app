@@ -34,4 +34,22 @@
   .main {
     flex-direction: column;
   }
+
+  .selection {
+    margin-top: 4rem;
+  }
+
+  .bodyS {
+    margin-top: 1rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .h1 {
+    font-size: var(--font-size-headingS);
+    font-weight: var(--font-weight-thin); 
+  }
+  .button {
+    margin-bottom: 1rem;
+  }
 }
